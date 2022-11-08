@@ -2,15 +2,15 @@
 *****************************************************************************
 @file         Deneyap_DumanDedektoru.h
 @mainpage     Deneyap Gas Sensor Arduino library header file
-@version      v1.0.0
-@date         June 23, 2022
+@version      v1.0.1
+@date         November 08, 2022
 @brief        This file contains all function prototypes and macros
               for Deneyap Gas Sensor Arduino library
 *****************************************************************************
 */
 
-#ifndef __SMOKEDETECTOR_H
-#define __SMOKEDETECTOR_H
+#ifndef __DENEYAPDUMANDEDEKTOR_H
+#define __DENEYAPDUMANDEDEKTOR_H
 
 #include <Wire.h>
 #include <Arduino.h>
@@ -64,4 +64,4 @@ private:
     bool I2C_SendDataPacket(SmokeDetector_DataPacket_TypeDef *dataPacket);
 };
 
-#endif /* __SMOKEDETECTOR_H */
+#endif /* __DENEYAPDUMANDEDEKTOR_H */

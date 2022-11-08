@@ -3,8 +3,8 @@
 @file         Deneyap_DumanDedektoru.cpp
 @mainpage     Deneyap Gas Sensor Arduino library source file
 @maintainer   RFtek Electronics <techsupport@rftek.com.tr>
-@version      v1.0.0
-@date         June 23, 2022
+@version      v1.0.1
+@date         November 08, 2022
 @brief        Includes functions to control Deneyap Gas Sensor
               Arduino library
 
@@ -94,7 +94,7 @@ bool SmokeDetector::setI2Caddress(uint8_t newAddress) {
 bool SmokeDetector::ReadSmokeDigital() {
     _dataPacket.command = (uint8_t)DIG_READ_SMOKE;
     _dataPacket.dataSize = 0;
-    return I2C_ReadData8bit(&_dataPacket);
+    return !I2C_ReadData8bit(&_dataPacket);
 }
 
 /**
